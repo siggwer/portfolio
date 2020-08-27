@@ -65,7 +65,10 @@ class HomeAction
         ->handleRequest($request);
 
         if ($this->contactHandler->handle($form)) {
-            return $redirectResponder('home');
+        //     return $viewResponder('home/home.html.twig',
+        //     [
+        //       'form' => $form->createView(),
+        //    ]);
         }
 
         return $viewResponder(

@@ -27,6 +27,7 @@ import '../js/main.js';
 import '../js/title.js';
 import '../js/loadMore.js';
 import '../js/isotope.js';
+import '../js/animatedSubmitButton.js';
 
 $(document).ready(function() {
     $('[data-toggle="popover"]').popover();
