@@ -1218,7 +1218,7 @@ section {
     border: 0;
     padding: 10px 24px;
     color: #fff;
-    transition: 0.4s;
+    /*transition: 0.4s;*/
     border-radius: 5px;
 }
 
@@ -1254,7 +1254,7 @@ section {
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
 }
-.contact .php-email-form button[type="submit"].buttonContact .animate.success:before {
+.contact .php-email-form button[type="submit"].buttonContact.animate.success:before {
     position: absolute;
     content: '';
     width: 25px;
@@ -1263,21 +1263,22 @@ section {
     border-right: 0;
     border-top: 0;
     left: 50%;
-    top: 50%;
+    /*top: 50%;*/
+    bottom: 13%;
     -webkit-transform: translate(-50%, -50%) rotate(0deg) scale(0);
     transform: translate(-50%, -50%) rotate(0deg) scale(0);
     -webkit-animation: success ease-in 0.15s forwards;
     animation: success ease-in 0.15s forwards;
-    animation-delay: 1.5s;
+    animation-delay: 0.5s;
 }
-.contact .php-email-form button[type="submit"].buttonContact .animate.error {
+.contact .php-email-form button[type="submit"].buttonContact.animate.error {
     position: relative;
     -webkit-animation: vibrate ease-in 0.5s forwards;
     animation: vibrate ease-in 0.5s forwards;
     -webkit-animation-delay: 1.5s;
     animation-delay: 1.5s;
 }
-.contact .php-email-form button[type="submit"].buttonContact .animate.error:before {
+.contact .php-email-form button[type="submit"].buttonContact.animate.error:before {
     color: #fff;
     position: absolute;
     content: '!';
