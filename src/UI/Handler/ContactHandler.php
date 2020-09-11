@@ -38,6 +38,7 @@ class ContactHandler
     {
         if ($form->isSubmitted() && $form->isValid()) {
             $data = $form->getData();
+            dd($data);
             $this->eventDispatcher->dispatch(new ContactMailEvent($data));
             $this->eventDispatcher->dispatch(
                 new FlashMessageEvent(

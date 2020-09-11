@@ -22,20 +22,5 @@ var animateButton = function(e) {
   
   for (var i = 0; i < classname.length; i++) {
     console.log(classname);
-    classname[i].addEventListener('click', animateButton, false);
+    classname[i].addEventListener('submit', animateButton, false);
   }
-
-  $(document).ready(function(){
-    $("#contactForm").validate({
-        submitHandler:function(form){
-            if (this.valid()){
-              $('#submit').addClass('success');
-              form.submit();
-            }
-            else {
-              $('#submit').addClass('error');
-              form.submit();
-            } 
-        }  
-    });
-});
