@@ -1146,7 +1146,11 @@ section {
 
 .contact .php-email-form {
     box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
-    padding: 27px;
+    padding: 17px;
+}
+
+.contact textarea.form-control{
+    height: 100px !important;
 }
 
 .contact .php-email-form .validate {
@@ -1218,150 +1222,8 @@ section {
     border: 0;
     padding: 10px 24px;
     color: #fff;
-    /*transition: 0.4s;*/
+    transition: 0.4s;
     border-radius: 5px;
-}
-
-.contact .php-email-form button[type="submit"].buttonContact:focus {
-    outline: 0;
-}
-.contact .php-email-form button[type="submit"].buttonContact.animate {
-    width: 68.1818181818px;
-    height: 68.1818181818px;
-    min-width: 0;
-    border-radius: 50%;
-    color: transparent;
-}
-.contact .php-email-form button[type="submit"].buttonContact.animate:after {
-    position: absolute;
-    content: '';
-    width: 25px;
-    height: 25px;
-    border: 4px solid #fefefe;
-    border-radius: 50%;
-    border-left-color: transparent;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    animation: spin ease-in 2.5s forwards;
-    animation-name: spin;
-    -webkit-animation-name: spin;
-    transition-timing-function: ease-in-out;
-    -webkit-transition-timing-function: ease-in-out;
-    animation-duration: 1.5s;
-    -webkit-animation-duration: 1.5s;
-    animation-fill-mode: forwards;
-    -webkit-animation-fill-mode: forwards;
-}
-.contact .php-email-form button[type="submit"].buttonContact.animate.success:before {
-    position: absolute;
-    content: '';
-    width: 25px;
-    height: 12.5px;
-    border: 4px solid #fefefe;
-    border-right: 0;
-    border-top: 0;
-    left: 50%;
-    /*top: 50%;*/
-    bottom: 13%;
-    -webkit-transform: translate(-50%, -50%) rotate(0deg) scale(0);
-    transform: translate(-50%, -50%) rotate(0deg) scale(0);
-    -webkit-animation: success ease-in 0.15s forwards;
-    animation: success ease-in 0.15s forwards;
-    animation-delay: 0.5s;
-}
-.contact .php-email-form button[type="submit"].buttonContact.animate.error {
-    position: relative;
-    -webkit-animation: vibrate ease-in 0.5s forwards;
-    animation: vibrate ease-in 0.5s forwards;
-    -webkit-animation-delay: 1.5s;
-    animation-delay: 1.5s;
-}
-.contact .php-email-form button[type="submit"].buttonContact.animate.error:before {
-    color: #fff;
-    position: absolute;
-    content: '!';
-    font-size: 1.8rem;
-    font-weight: bold;
-    text-align: center;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%) scale(0);
-    transform: translate(-50%, -50%) scale(0);
-    -webkit-animation: error ease-in 0.5s forwards;
-    animation: error ease-in 0.5s forwards;
-    animation-delay: 1.5s;
-}
-@keyframes spin {
-    0% {
-        transform: translate(-50%, -50%) rotate(0deg) scale(1);
-   }
-    90% {
-        transform: translate(-50%, -50%) rotate(1080deg) scale(1);
-   }
-    100% {
-        transform: scale(0);
-   }
-}
-@-webkit-keyframes spin {
-    0% {
-        -webkit-transform: translate(-50%, -50%) rotate(0deg) scale(1);
-   }
-    98% {
-        -webkit-transform: translate(-50%, -50%) rotate(1080deg) scale(1);
-   }
-    100% {
-        -webkit-transform: translate(-50%, -50%) rotate(1080deg) scale(0);
-   }
-}
-@keyframes success {
-    from {
-        transform: translate(-50%, -50%) rotate(0) scale(0);
-   }
-    to {
-        transform: translate(-50%, -50%) rotate(-45deg) scale(1);
-   }
-}
-@-webkit-keyframes success {
-    from {
-        -webkit-transform: translate(-50%, -50%) rotate(0) scale(0);
-   }
-    to {
-        -webkit-transform: translate(-50%, -50%) rotate(-45deg) scale(1);
-   }
-}
-@keyframes error {
-    from {
-        transform: translate(-50%, -50%) scale(0);
-   }
-    to {
-        transform: translate(-50%, -50%) scale(1);
-        background-color: #f44336;
-   }
-}
-@-webkit-keyframes error {
-    from {
-        -webkit-transform: translate(-50%, -50%) scale(0);
-   }
-    to {
-        -webkit-transform: translate(-50%, -50%) scale(1);
-        background-color: #f44336;
-   }
-}
-@keyframes vibrate {
-    0%, 30%, 60%, 85%, 100% {
-        left: 0;
-        background-color: #f44336;
-   }
-    10%, 40%, 90%, 70% {
-        left: -2px;
-        background-color: #f44336;
-   }
-    20%, 50%, 80%, 95% {
-        left: 2px;
-        background-color: #f44336;
-   }
 }
 
 .contact .php-email-form button[type="submit"]:hover {
@@ -1384,6 +1246,191 @@ section {
     100% {
         transform: rotate(360deg);
     }
+}
+
+.frame{
+	width: 600px;
+	height: 350px;
+	/*margin: 250px auto 0;*/
+	position: relative;
+	background: #435d77;
+	border-radius:0 0 40px 40px; 
+}
+#button_open_envelope{
+	width: 180px;
+    /*height: 30px;*/
+	position: absolute;
+	z-index: 311;
+	top: 250px;
+    left: 208px;
+    text-align: center;
+	border-radius: 10px;
+	color: #fff;
+	font-size: 26px;
+	padding:15px 0; 
+	border: 2px solid #fff;
+	transition:.3s;
+}
+#button_open_envelope:hover{
+	background: #FFf;
+    color: #FFA972;
+    font-family: 'Raleway', sans-serif;
+	transform:scale(1.1);
+	transition:background .25s, transform .5s,ease-in;
+	cursor: pointer;
+}
+.message{
+	position: relative;
+	width: 580px;
+	min-height: 250px;
+	height: auto;
+	background: #fff;
+	margin: 0 auto;
+	top: 30px;
+	box-shadow: 0 0 5px 2px #333;
+	transition:2s ease-in-out;
+	transition-delay:1.5s;
+	z-index: 300;
+}
+.left,.right,.top{width: 0;	height: 0;position:absolute;top:0;z-index: 310;}
+.left{	
+	border-left: 300px solid #FFAA72;
+	border-top: 160px solid transparent;
+	border-bottom: 160px solid transparent;
+}
+.right{	
+	border-right: 300px solid #FFAA72;
+	border-top: 160px solid transparent;
+	border-bottom: 160px solid transparent;;
+	left:300px;
+}
+.top{	
+	border-right: 300px solid transparent;
+	border-top: 200px solid #FFC097;
+	border-left: 300px solid transparent;
+	transition:transform 1s,border 1s, ease-in-out;
+	transform-origin:top;
+	transform:rotateX(0deg);
+	z-index: 500;
+}
+.bottom{
+	width: 600px;
+	height: 190px;
+	position: absolute;
+	background: #C06124;
+	top: 160px;
+	border-radius:0 0 30px 30px;
+	z-index: 310; 
+}
+
+.open{
+	transform-origin:top;
+	transform:rotateX(180deg);
+	transition:transform .7s,border .7s,z-index .7s ease-in-out;
+	border-top: 200px solid #2c3e50;
+	z-index: 200;
+}
+.pull{
+	-webkit-animation:message_animation 2s 1 ease-in-out;
+	animation:message_animation 2s 1 ease-in-out;
+	-webkit-animation-delay:.9s;
+	animation-delay:.45s;
+	transition:1.5s;
+	transition-delay:1s;
+	z-index: 350;
+}
+#name,#email,#phone,#messarea,#send{
+	margin: 0;
+	padding: 0 0 0 10px;
+	width: 570px;
+	height:40px;
+	float: left;
+	display: block;
+	font-size: 18px;
+	color: #2b67cb;
+	border:none;
+	border-bottom:1px solid #bdbdbd;
+	letter-spacing: normal;
+}
+#messarea{
+	height: 117px;
+	width: 560px;
+	overflow: auto;
+	border:none;
+	padding: 10px;
+}
+#send{ 
+	width:   580px;
+	padding: 0;	
+	border:  none;
+	cursor:  pointer;
+	background: #7CB342;
+	color: #fff;
+	transition:.35s;
+	letter-spacing: 1px;
+}
+#send:hover{background:tomato;transition:.35s;}
+
+::-moz-placeholder{color: #7CB342;font-family: 'Raleway', sans-serif;font-size: 20px;opacity: 1;} 
+::-webkit-input-placeholder {color: #7CB342; font-family: 'Raleway', sans-serif;font-size: 20px;}
+*:focus {outline: none;}
+input:focus:invalid,textarea:focus:invalid {
+ /* when a field is considered invalid by the browser */
+    background: #fff url() no-repeat 98% center;
+    box-shadow: 0 0 5px #d45252;
+    border:1px solid #b03535;
+}
+input:required:valid,textarea:required:valid { 
+	/* when a field is considered valid by the browser */
+    background: #fff url() no-repeat 98% center;
+    box-shadow: 0 0 5px #5cd053;
+    border-color: #28921f;
+}
+
+
+@-webkit-keyframes message_animation {
+	0%{
+		transform:translatey(0px);
+		z-index: 300;
+		transition: 1s ease-in-out;
+	}
+	50%{
+		transform:translatey(-340px);
+		z-index: 300;
+		transition: 1s ease-in-out;
+	}
+	51%{
+		transform:translatey(-340px);
+		z-index: 350;
+		transition: 1s ease-in-out;
+	}
+	100%{
+		transform:translatey(0px);
+		z-index: 350;
+		transition: 1s ease-in-out;
+	}
+}
+@keyframes message_animation {
+	0%{
+		transform:translatey(0px);
+		z-index: 300;
+		transition: 1s ease-in-out;
+	}
+	50%{
+		transform:translatey(-340px);
+		z-index: 300;
+		transition: 1s ease-in-out;
+	}
+	51%{
+		transform:translatey(-340px);
+		z-index: 350;
+		transition: 1s ease-in-out;
+	}
+	100%{
+		transform:translatey(0px);
+		z-index: 350;
+		transition: 1s ease-in-out;
+	}
 }
 
 /*--------------------------------------------------------------

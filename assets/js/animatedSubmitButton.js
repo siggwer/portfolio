@@ -3,24 +3,20 @@ import('jquery');
 /**
  * Function to animated submit button
  */
-var animateButton = function(e) {
+$(document).ready(function(){
+  $('.frame').on('click', function(){
+    $paragrapheTitleText = $('p.paragrapheTitle');
+    $paragrapheTopText = $('p.paragrapheTop');
 
-    e.preventDefault();
-    //reset animation
-    e.target.classList.remove('animate');
-    
-    e.target.classList.add('animate');
-    
-    e.target.classList.add('animate');
-    
-    setTimeout(function(){
-      e.target.classList.remove('animate');
-    },2500);
-  };
-  
-  var classname = document.getElementsByClassName("buttonContact");
-  
-  for (var i = 0; i < classname.length; i++) {
-    console.log(classname);
-    classname[i].addEventListener('submit', animateButton, false);
-  }
+    $paragrapheTitleText.is(':visible');    
+    $('p.paragrapheTitle').hide('p.paragrapheTitle');
+
+    $('.top').addClass('open');
+
+    $paragrapheTopText.is(':hidden');
+    $('.top').show('p.paragrapheTop');
+
+    $('.message').addClass('pull');
+  })
+
+});
