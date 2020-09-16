@@ -1251,7 +1251,7 @@ section {
 .frame{
 	width: 600px;
 	height: 350px;
-	/*margin: 250px auto 0;*/
+	margin-top: 50px;
 	position: relative;
 	background: #435d77;
 	border-radius:0 0 40px 40px; 
@@ -1266,7 +1266,7 @@ section {
     text-align: center;
 	border-radius: 10px;
 	color: #fff;
-	font-size: 26px;
+	font-size: 20px;
 	padding:15px 0; 
 	border: 2px solid #fff;
 	transition:.3s;
@@ -1376,13 +1376,13 @@ section {
 *:focus {outline: none;}
 input:focus:invalid,textarea:focus:invalid {
  /* when a field is considered invalid by the browser */
-    background: #fff url() no-repeat 98% center;
+    background: #fff /*url()*/ no-repeat 98% center;
     box-shadow: 0 0 5px #d45252;
     border:1px solid #b03535;
 }
 input:required:valid,textarea:required:valid { 
 	/* when a field is considered valid by the browser */
-    background: #fff url() no-repeat 98% center;
+    background: #fff /*url()*/ no-repeat 98% center;
     box-shadow: 0 0 5px #5cd053;
     border-color: #28921f;
 }
@@ -1432,6 +1432,64 @@ input:required:valid,textarea:required:valid {
 		transition: 1s ease-in-out;
 	}
 }
+
+@media (max-width: 575px) and (max-width: 767px) {
+    .frame{
+        /*width: 600px;
+        height: 350px;
+        margin-top: 50px;
+        position: relative;*/
+        background: #FFFFFF;
+        border-radius:0 0 40px 40px; 
+    }
+    #button_open_envelope{
+        display: none;
+    }
+    #button_open_envelope:hover{
+        display: none;
+    }
+    .message{
+        position: relative;
+        width: 480px;
+        min-height: 250px;
+        height: auto;
+        background: #fff;
+        margin-left: 20px;
+        top: 30px;
+        box-shadow: 0 0 5px 2px #333;
+        z-index: 300;
+    }
+    .left,.right,.top{width: 0;	height: 0;position:absolute;top:0;z-index: 310;}
+    .left{	
+        display: none;
+    }
+    .right{	
+        display: none;
+    }
+    .top{	
+        border-top: none;
+    }
+    .bottom{
+        display: none;
+    }
+    
+    .open{
+        display: none;
+    }
+    #name,#email,#phone,#messarea,#send{
+        display: none;
+    }
+    #messarea{
+        display: none;
+    }
+    #send{ 
+      display: none;
+    }
+    #send:hover{background:tomato;transition:.35s;}
+    }
+    input:required:valid,textarea:required:valid { 
+        display: none;
+    }
 
 /*--------------------------------------------------------------
 # Footer
