@@ -14,24 +14,24 @@
                 <div class="validate"></div>
             </div>
         </div>
-            <div class="form-group">
-                {{ form_widget(form.subject, {'attr': {'placeholder': 'Indiquez un sujet'}}) }} 
-                    <div class="validate"></div>
-            </div>
-            <div class="form-group">
-                {{ form_widget(form.message, {'attr': {'placeholder': 'Ecrivez votre message', 'rows':'6'}}) }}    
-                    <div class="validate"></div>
-            </div>
-            <div class="mb-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Votre message a bien été envoyé. Merci.</div>
-            </div>
-            <div class="text-center">
-                <button class="button buttonContact" id="button" type="submit">Envoyer</button>
-            </div>
+        <div class="form-group">
+            {{ form_widget(form.subject, {'attr': {'placeholder': 'Indiquez un sujet'}}) }} 
+                <div class="validate"></div>
+        </div>
+        <div class="form-group">
+            {{ form_widget(form.message, {'attr': {'placeholder': 'Ecrivez votre message', 'rows':'6'}}) }}    
+                <div class="validate"></div>
+        </div>
+        <div class="mb-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Votre message a bien été envoyé. Merci.</div>
+        </div>
+        <div class="text-center">
+            <button class="button buttonContact" id="button" type="submit">Envoyer</button>
+        </div>
             {{ form_end(form) }}
-			</div>
+			</div> 
 		<div class="bottom"></div>			
 		<div class="left"></div>
 		<div class="right"></div>

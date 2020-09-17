@@ -1433,64 +1433,6 @@ input:required:valid,textarea:required:valid {
 	}
 }
 
-@media (max-width: 575px) and (max-width: 767px) {
-    .frame{
-        /*width: 600px;
-        height: 350px;
-        margin-top: 50px;
-        position: relative;*/
-        background: #FFFFFF;
-        border-radius:0 0 40px 40px; 
-    }
-    #button_open_envelope{
-        display: none;
-    }
-    #button_open_envelope:hover{
-        display: none;
-    }
-    .message{
-        position: relative;
-        width: 480px;
-        min-height: 250px;
-        height: auto;
-        background: #fff;
-        margin-left: 20px;
-        top: 30px;
-        box-shadow: 0 0 5px 2px #333;
-        z-index: 300;
-    }
-    .left,.right,.top{width: 0;	height: 0;position:absolute;top:0;z-index: 310;}
-    .left{	
-        display: none;
-    }
-    .right{	
-        display: none;
-    }
-    .top{	
-        border-top: none;
-    }
-    .bottom{
-        display: none;
-    }
-    
-    .open{
-        display: none;
-    }
-    #name,#email,#phone,#messarea,#send{
-        display: none;
-    }
-    #messarea{
-        display: none;
-    }
-    #send{ 
-      display: none;
-    }
-    #send:hover{background:tomato;transition:.35s;}
-    }
-    input:required:valid,textarea:required:valid { 
-        display: none;
-    }
-
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -1523,7 +1465,7 @@ input:required:valid,textarea:required:valid {
     font-weight: 700;
     color: #fff;
     position: relative;
-    font-family: "Satisfy", serif;
+    font-family: "Raleway", sans-serif;
     padding: 0;
     margin: 0 0 15px 0;
 }
