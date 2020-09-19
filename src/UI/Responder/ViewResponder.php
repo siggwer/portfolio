@@ -32,7 +32,7 @@ class ViewResponder
 
     /**
      * @param string $template
-     * @param array $params
+     * @param array  $params
      *
      * @return Response
      *

@@ -10,8 +10,8 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
  */
 class RedirectResponder
 {
-    /** 
-     * @var UrlGeneratorInterface 
+    /**
+     * @var UrlGeneratorInterface
      */
     protected $urlGenerator;
 
@@ -30,8 +30,8 @@ class RedirectResponder
      * Undocumented function
      *
      * @param string $routeName
-     * @param array $paramsRoute
-     * 
+     * @param array  $paramsRoute
+     *
      * @return void
      */
     public function __invoke(

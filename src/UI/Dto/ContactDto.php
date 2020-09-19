@@ -5,11 +5,11 @@ namespace App\UI\Dto;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * 
+ *
  */
 class ContactDto
 {
-     /**
+    /**
      * @var string|null
      *
      * @Assert\NotBlank(

@@ -20,7 +20,6 @@
         "build": "encore production --progress"
     },
     "dependencies": {
-        "isotope-layout": "^3.0.6",
-        "jquery-validation": "^1.19.2"
+        "isotope-layout": "^3.0.6"
     }
 }

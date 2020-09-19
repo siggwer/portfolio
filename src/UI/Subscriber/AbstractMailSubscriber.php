@@ -3,6 +3,7 @@
 namespace App\UI\Subscriber;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+
 //use App\UI\Utils\MailHelper;
 
 /**
@@ -10,8 +11,8 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
  */
 abstract class AbstractMailSubscriber implements EventSubscriberInterface
 {
-    /** 
-     * @var array 
+    /**
+     * @var array
      */
     protected $paramsMailApp;
 
@@ -27,7 +28,7 @@ abstract class AbstractMailSubscriber implements EventSubscriberInterface
 
     /**
      * @codeCoverageIgnore
-     * 
+     *
      * @return array
      */
     public static function getSubscribedEvents()

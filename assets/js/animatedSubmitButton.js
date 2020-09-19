@@ -3,20 +3,24 @@ import('jquery');
 /**
  * Function to animated submit button
  */
-$(document).ready(function(){
-  $('.frame').on('click', function(){
-    $paragrapheTitleText = $('p.paragrapheTitle');
-    $paragrapheTopText = $('p.paragrapheTop');
+$(document).ready(
+    function () {
+        $('.frame').on(
+            'click', function () {
+                $paragrapheTitleText = $('p.paragrapheTitle');
+                $paragrapheTopText = $('p.paragrapheTop');
 
-    $paragrapheTitleText.is(':visible');    
-    $('p.paragrapheTitle').hide('p.paragrapheTitle');
+                $paragrapheTitleText.is(':visible');    
+                $('p.paragrapheTitle').hide('p.paragrapheTitle');
 
-    $('.top').addClass('open');
+                $('.top').addClass('open');
 
-    $paragrapheTopText.is(':hidden');
-    $('.top').show('p.paragrapheTop');
+                $paragrapheTopText.is(':hidden');
+                $('.top').show('p.paragrapheTop');
 
-    $('.message').addClass('pull');
-  })
+                $('.message').addClass('pull');
+            }
+        )
 
-});
+    }
+);

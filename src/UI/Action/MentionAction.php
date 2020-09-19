@@ -20,7 +20,7 @@ use Twig\Error\LoaderError;
 class MentionAction
 {
     /**
-     * @param Request $request
+     * @param Request       $request
      * @param ViewResponder $viewResponder
      *
      * @return Response
@@ -29,8 +29,8 @@ class MentionAction
      * @throws RuntimeError
      * @throws SyntaxError
      */
-    public function __invoke(Request $request,ViewResponder $viewResponder) {
-
+    public function __invoke(Request $request, ViewResponder $viewResponder)
+    {
         return $viewResponder(
             'mention/mention.html.twig'
         );

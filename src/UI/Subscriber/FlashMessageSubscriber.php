@@ -14,20 +14,20 @@ use App\UI\Event\FlashMessageEvent;
  */
 class FlashMessageSubscriber implements EventSubscriberInterface
 {
-//    /**
-//     * @var TranslatorInterface
-//     */
-//    protected $translator;
+    //    /**
+    //     * @var TranslatorInterface
+    //     */
+    //    protected $translator;
 
-    /** 
-     * @var SessionInterface 
+    /**
+     * @var SessionInterface
      */
     protected $session;
 
     /**
      * FlashMessageSubscriber constructor.
      *
-     * @param SessionInterface    $session
+     * @param SessionInterface $session
      */
     public function __construct(
         SessionInterface $session

@@ -22,21 +22,21 @@ use Twig\Error\LoaderError;
  */
 class HomeAction
 {
-    /** 
-     * @var FormFactoryInterface 
+    /**
+     * @var FormFactoryInterface
      */
     protected $formFactory;
 
     /**
-    *  @var ContactHandler
-    */
+     * @var ContactHandler
+     */
     protected $contactHandler;
 
     /**
      * Home constructor.
      *
      * @param FormFactoryInterface $formFactory
-     * @param ContactHandler $contactHandler
+     * @param ContactHandler       $contactHandler
      */
     public function __construct(
         FormFactoryInterface $formFactory,
@@ -47,7 +47,7 @@ class HomeAction
     }
 
     /**
-     * @param Request $request
+     * @param Request       $request
      * @param ViewResponder $viewResponder
      *
      * @return mixed
@@ -62,20 +62,20 @@ class HomeAction
         RedirectResponder $redirectResponder
     ) {
         $form = $this->formFactory->create(ContactType::class)
-        ->handleRequest($request);
+            ->handleRequest($request);
 
         if ($this->contactHandler->handle($form)) {
-        //     return $viewResponder('home/home.html.twig',
-        //     [
-        //       'form' => $form->createView(),
-        //    ]);
+            //     return $viewResponder('home/home.html.twig',
+            //     [
+            //       'form' => $form->createView(),
+            //    ]);
         }
 
         return $viewResponder(
-           'home/home.html.twig',
+            'home/home.html.twig',
             [
               'form' => $form->createView(),
-           ]
+            ]
         );
     }
 }

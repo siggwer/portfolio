@@ -13,18 +13,18 @@ class FlashMessageEvent extends Event
 {
     const FLASH_MESSAGE = 'app.flash_message';
 
-    /** 
-     * @var string 
+    /**
+     * @var string
      */
     protected $type;
 
-    /** 
-     * @var string 
+    /**
+     * @var string
      */
     protected $key;
 
-    /** 
-     * @var bool 
+    /**
+     * @var bool
      */
     //protected $translatable;
 
@@ -60,11 +60,11 @@ class FlashMessageEvent extends Event
         return $this->key;
     }
 
-//    /**
-//     * @return bool
-//     */
-//    public function isTranslatable(): bool
-//    {
-//        return $this->translatable;
-//    }
+    //    /**
+    //     * @return bool
+    //     */
+    //    public function isTranslatable(): bool
+    //    {
+    //        return $this->translatable;
+    //    }
 }

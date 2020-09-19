@@ -37,9 +37,9 @@ class ContactMailSubscriber extends AbstractMailSubscriber
     /**
      * ContactMailSubscriber constructor.
      *
-     * @param string $dsn
+     * @param string      $dsn
      * @param Environment $templating
-     * @param array $paramsMailApp
+     * @param array       $paramsMailApp
      */
     public function __construct(string $dsn, Environment $templating, array $paramsMailApp)
     {
@@ -71,11 +71,16 @@ class ContactMailSubscriber extends AbstractMailSubscriber
     public function onContactForm(ContactMailEvent $event)
     {
         $email = (new Email())
-            ->from(new Address($event->getContact()->getEmail(),
-                sprintf('%s %s',
-                    $event->getContact()->getName(),
-                    $event->getContact()->getEmail()
-                )))
+            ->from(
+                new Address(
+                    $event->getContact()->getEmail(),
+                    sprintf(
+                        '%s %s',
+                        $event->getContact()->getName(),
+                        $event->getContact()->getEmail()
+                    )
+                )
+            )
             ->to(
                 new Address(
                     $this->paramsMailApp['email'],
